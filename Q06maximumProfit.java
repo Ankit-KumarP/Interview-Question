@@ -1,4 +1,4 @@
-// (02/04/2024, 11:13 AM)
+// (02/04/2024, 11:13 AM) | Infosys
 // you are given two arrays A and B of size N.in the following operations can be
 // performed on A choose at most two indexes i and j from a such that Aj+Aj <_ K
 // it also given that from the selected index i you obtain a profit B find the
@@ -12,7 +12,12 @@ package My_Interview_Ques;
 import java.util.*;
 import java.lang.*;
 
-public class Q012maximumProfit {
+public class Q06maximumProfit {
+    // Logic:
+    // (I) Take two index on array low and high. Check if condition if satisfy the
+    // consider it else not consider it.
+    // (II) (i,j) can furter broken into (i+1,j) and (i,j-1).
+    // (III) Apply DP
 
     // maxProfit
     static int maxProfit(int[] a, int[] b, int k) {

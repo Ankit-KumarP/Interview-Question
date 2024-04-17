@@ -1,4 +1,4 @@
-// (08/03/2024, 12:21)
+// (08/03/2024, 12:21) | Unstop
 // Given an integer n. The task is to count the number of operations required to reduce n to 0. In every operation, n can be updated as n = n – d where d is the smallest prime divisor of n.
 // Examples: 
 // Input: n = 5 
@@ -14,31 +14,35 @@ package My_Interview_Ques;
 import java.util.*;
 import java.lang.*;
 
-public class Q011reduceTozero {
+public class Q06reduceTozero {
 
+    // Logic:
+    // (I) If 'n' is even: It's smallest prime factor is '2'. And when we subtract
+    // '2' from an even number is again become an even number. so answer is (n/2);
+    // (II) If 'n' is odd: It's smallest prime factor is odd. And when we subrtract
+    // odd from and odd it become an even number. so answer is ((n-d)/2) + 1 here
+    // 'd' is smallest prime factor of 'n'.
+    // T = O(n) | S = O(1)
     // count
     public static int count(int n) {
 
         int result = 0;
-        if (n == 0)
-            return 0;
-        for (int i = 2; i <= n; i++) {
-            if (n % i == 0) {
-                result = 1 + count(n - i);
-                break;
-            }
+        if (n % 2 == 0) {
+            return (n / 2);
         }
+        int ptr = 2;
+        while (n % ptr != 0)
+            ptr++;
+        result = 1 + ((n - ptr) / 2);
 
-        return result ;
+        return result;
     }
 
     public static void main(String[] args) {
-        int n = 9999; //4999
+        // int n = 9999; // 4999
         // int n = 2; // 1
-        // int n = 8;
-        // int n = 25;
-        // int n = 7;
-        // int n = 50 //25
+        // int n = 25; //11
+        int n = 50; // 25
         int ans = count(n);
         System.out.println(ans);
 

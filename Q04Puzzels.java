@@ -2,7 +2,7 @@
 // QUES:
 // Given a 4×4 board with 15 tiles (every tile has one number from 1 to 15) and one empty space. The objective is to place the numbers on tiles in order using the empty space. We can slide four adjacent (left, right, above and below) tiles into the empty space.
 // check the puzzel is solvable or not.
-package Interview_Ques;
+package My_Interview_Ques;
 // LOGIC:
 
 // (i) Take all the elements of matrix in an array and count number of inversions. [ (2,1) is inversion because 2 > 1 ]
@@ -11,7 +11,7 @@ package Interview_Ques;
 // (*) inversion count is even and blank is in even position.
 // (*) inversion count is odd and blank is in odd position.
 
-public class Q06Puzzels {
+public class Q04Puzzels {
     public static void main(String[] args) {
         int[][] matrix = {
                 { 3, 9, 1, 15 },

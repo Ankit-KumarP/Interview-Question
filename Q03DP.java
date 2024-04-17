@@ -13,7 +13,14 @@ package My_Interview_Ques;
 import java.util.*;
 import java.lang.*;
 
-public class Q04DP {
+public class Q03DP {
+
+    // Logic:
+    // (I) If take element then do ptr+2 if not take then do ptr1 + 1;
+    // (II) Here we can use DP because we need to find only numbers of subsets. If
+    // we need to find the subsets then we can't use DP.
+    // T = O(n) | S = O(n)
+
     // function
     public static int totalNumber(String s) {
 

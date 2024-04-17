@@ -17,10 +17,10 @@ package My_Interview_Ques;
 import java.util.*;
 import java.lang.*;
 
-public class Q009Tree {
+public class Q05Tree {
 
     // LOGIC: using a Node class that keep the value of min, max and current node
-    // value. + Queue DS
+    // value of each node of tree. + Queue DS
     // (I)For each node keep the details: val = value of current node, min = minimum
     // value possible for its left child, max = maximum value possible for its right
     // child.
@@ -97,13 +97,13 @@ public class Q009Tree {
 
     public static void main(String[] args) {
 
-        // int[] arr = { 8, 5, 11, -1,-1,10, 12, 7,-1 }; //
+        // int[] arr = { 8, 5, 11, -1, -1, 10, 12, 7, -1 }; //
         // [8,5,11,null,null,10,12,7,null], false
         // int [] arr = {8,5,13,-1,-1,10,16,9,11}; // [8,5,13,null,null,10,16,9,11],
         // true
         // int[] arr = { 8, 5, 13, -1, -1, 10, 16, 9, 14 };//
         // [8,5,13,null,null,10,16,9,14], false
-        int[] arr = { 4, 2, 7, 1, 3 }; // true
+        int[] arr = { 4, 2, 7,1, 3 }; // true
 
         boolean ans = isBST(arr, arr.length);
         System.out.println(ans);
